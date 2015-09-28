@@ -8,20 +8,10 @@
 
 #-------------------ROMS To Be Built------------------#
 
-PRODUCT[0]="toro"			# phone model name (product folder name)
+PRODUCT[0]="$1"			# phone model name (product folder name)
 LUNCHCMD[0]="bamf_nexus-userdebug"	# lunch command used for ROM
 BUILDNME[0]="bamf_nexus"		# name of the output ROM in the out folder, before "-ota-"
 OUTPUTNME[0]="bamf_nexus-toro"		# what you want the new name to be
-
-PRODUCT[1]="maguro"
-LUNCHCMD[1]="bamf_maguronexus-userdebug"
-BUILDNME[1]="bamf_maguronexus"
-OUTPUTNME[1]="bamf_nexus-maguro"
-
-PRODUCT[2]="toroplus"
-LUNCHCMD[2]="bamf_nexus_spr-userdebug"
-BUILDNME[2]="bamf_nexus_spr"
-OUTPUTNME[2]="bamf_nexus-torospr"
 
 #---------------------Build Settings------------------#
 
@@ -32,10 +22,10 @@ OUTPUTNME[2]="bamf_nexus-torospr"
 MOVE=y
 
 # folder they should be moved to
-STORAGE=/cloud/storage/directory
+STORAGE=~/android/zips
 
 # your build source code directory path
-SAUCE=/home/shauder/TBParadigm
+SAUCE=~/android/$2
 
 # number for the -j parameter
 J=9
@@ -59,15 +49,10 @@ DATE=`eval date +%m`-`eval date +%d`
 FTP=n
 
 # FTP server settings
-FTPHOST[0]="host"	# ftp hostname
-FTPUSER[0]="user"	# ftp username 
-FTPPASS[0]="password"	# ftp password
-FTPDIR[0]="directory"	# ftp upload directory
-
-FTPHOST[1]="host"
-FTPUSER[1]="user"
-FTPPASS[1]="password"
-FTPDIR[1]="directory"
+FTPHOST[0]="razor-rom.com"	# ftp hostname
+FTPUSER[0]="eoghan1@razor-rom.com"	# ftp username 
+FTPPASS[0]="Vgv*T31&"	# ftp password
+FTPDIR[0]="$1"	# ftp upload directory
 
 #---------------------Build Bot Code-------------------#
 
